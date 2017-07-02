@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SISCAFISI</string>
+    <string name="app_description">Sistema de Cadastramento de Pessoas Física</string>
+    <string name="app_dev_name">Tiago Silva do Nascimento</string>
+    <string name="app_version">1.0</string>
+    <string name="title_activity_tela_cadastrar">SISCAFISI - Cadastrar</string>
+
+    <string name="init_db">
+         CREATE TABLE IF NOT EXISTS CadastroPessoasFisicas (
+            id INTEGER PRIMARY KEY,
+            nome TEXT,
+            cpf TEXT,
+            idade INTEGER NOT NULL,
+            telefone TEXT,
+            email text
+        );
+    </string>
+
+    <string name="updt_db">
+        DROP TABLE IF EXISTS CadastroPessoasFisicas;
+    </string>
+    <string name="insert_pf">
+        INSERT INTO CadastroPessoasFisicas(nome, cpf, idade,telefone,email)
+            values (?, ?, ?, ?, ?)
+    </string>
+</resources>
